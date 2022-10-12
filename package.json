@@ -1,8 +1,7 @@
 {
-  "name": "eslint-config",
+  "name": "eslint-config-jv",
   "version": "1.0.0",
   "description": "Configuración para ESLint",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
