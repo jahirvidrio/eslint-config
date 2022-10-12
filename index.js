@@ -15,18 +15,12 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.mjs', '.js', '.json']
-      }
+        extensions: ['.mjs', '.js', '.json'],
+      },
     },
-    'import/extensions': [
-      '.js',
-      '.mjs',
-    ],
-    'import/core-modules': [
-    ],
-    'import/ignore': [
-      'node_modules',
-    ],
+    'import/extensions': ['.js', '.mjs'],
+    'import/core-modules': [],
+    'import/ignore': ['node_modules'],
   },
   rules: {},
 };

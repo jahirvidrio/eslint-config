@@ -1,8 +1,4 @@
 module.exports = {
-  env: {
-    node: true
-  },
-
   rules: {
     // enforce return after a callback
     'callback-return': 'off',
@@ -39,5 +35,5 @@ module.exports = {
 
     // disallow use of synchronous methods (off by default)
     'no-sync': 'off',
-  }
+  },
 };

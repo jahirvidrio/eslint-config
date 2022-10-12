@@ -1,23 +1,27 @@
 module.exports = {
   env: {
-    es6: true
+    es6: true,
   },
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
     ecmaFeatures: {
       generators: false,
-      objectLiteralDuplicateProperties: false
-    }
+      objectLiteralDuplicateProperties: false,
+    },
   },
 
   rules: {
     // enforces no braces where they can be omitted
     // https://eslint.org/docs/rules/arrow-body-style
     // TODO: enable requireReturnForObjectLiteral?
-    'arrow-body-style': ['error', 'as-needed', {
-      requireReturnForObjectLiteral: false,
-    }],
+    'arrow-body-style': [
+      'error',
+      'as-needed',
+      {
+        requireReturnForObjectLiteral: false,
+      },
+    ],
 
     // require parens in arrow function arguments
     // https://eslint.org/docs/rules/arrow-parens
@@ -40,9 +44,12 @@ module.exports = {
 
     // disallow arrow functions where they could be confused with comparisons
     // https://eslint.org/docs/rules/no-confusing-arrow
-    'no-confusing-arrow': ['error', {
-      allowParens: true,
-    }],
+    'no-confusing-arrow': [
+      'error',
+      {
+        allowParens: true,
+      },
+    ],
 
     // disallow modifying variables that are declared using const
     'no-const-assign': 'error',
@@ -57,12 +64,16 @@ module.exports = {
 
     // Disallow specified names in exports
     // https://eslint.org/docs/rules/no-restricted-exports
-    'no-restricted-exports': ['error', {
-      restrictedNamedExports: [
-        'default', // use `export default` to provide a default export
-        'then', // this will cause tons of confusion when your module is dynamically `import()`ed, and will break in most node ESM versions
-      ],
-    }],
+    'no-restricted-exports': [
+      'error',
+      {
+        restrictedNamedExports: [
+          // eslint-disable-next-line array-element-newline
+          'default', // use `export default` to provide a default export
+          'then', // this will cause tons of confusion when your module is dynamically `import()`ed, and will break in most node ESM versions
+        ],
+      },
+    ],
 
     // disallow to use this/super before super() calling in constructors.
     // https://eslint.org/docs/rules/no-this-before-super
@@ -78,48 +89,65 @@ module.exports = {
 
     // disallow renaming import, export, and destructured assignments to the same name
     // https://eslint.org/docs/rules/no-useless-rename
-    'no-useless-rename': ['error', {
-      ignoreDestructuring: false,
-      ignoreImport: false,
-      ignoreExport: false,
-    }],
+    'no-useless-rename': [
+      'error',
+      {
+        ignoreDestructuring: false,
+        ignoreImport: false,
+        ignoreExport: false,
+      },
+    ],
 
     // require let or const instead of var
     'no-var': 'error',
 
     // require method and property shorthand syntax for object literals
     // https://eslint.org/docs/rules/object-shorthand
-    'object-shorthand': ['error', 'always', {
-      ignoreConstructors: false,
-      avoidQuotes: true,
-    }],
+    'object-shorthand': [
+      'error',
+      'always',
+      {
+        ignoreConstructors: false,
+        avoidQuotes: true,
+      },
+    ],
 
     // suggest using arrow functions as callbacks
-    'prefer-arrow-callback': ['error', {
-      allowNamedFunctions: false,
-      allowUnboundThis: true,
-    }],
+    'prefer-arrow-callback': [
+      'error',
+      {
+        allowNamedFunctions: false,
+        allowUnboundThis: true,
+      },
+    ],
 
     // suggest using of const declaration for variables that are never modified after declared
-    'prefer-const': ['error', {
-      destructuring: 'any',
-      ignoreReadBeforeAssign: true,
-    }],
+    'prefer-const': [
+      'error',
+      {
+        destructuring: 'any',
+        ignoreReadBeforeAssign: true,
+      },
+    ],
 
     // Prefer destructuring from arrays and objects
     // https://eslint.org/docs/rules/prefer-destructuring
-    'prefer-destructuring': ['error', {
-      VariableDeclarator: {
-        array: false,
-        object: true,
+    'prefer-destructuring': [
+      'error',
+      {
+        VariableDeclarator: {
+          array: false,
+          object: true,
+        },
+        AssignmentExpression: {
+          array: true,
+          object: false,
+        },
       },
-      AssignmentExpression: {
-        array: true,
-        object: false,
+      {
+        enforceForRenamedProperties: false,
       },
-    }, {
-      enforceForRenamedProperties: false,
-    }],
+    ],
 
     // disallow parseInt() in favor of binary, octal, and hexadecimal literals
     // https://eslint.org/docs/rules/prefer-numeric-literals
@@ -159,6 +187,6 @@ module.exports = {
 
     // enforce spacing around the * in yield* expressions
     // https://eslint.org/docs/rules/yield-star-spacing
-    'yield-star-spacing': ['error', 'after']
-  }
+    'yield-star-spacing': ['error', 'after'],
+  },
 };
