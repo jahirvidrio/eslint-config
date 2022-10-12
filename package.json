@@ -1,0 +1,23 @@
+{
+  "name": "eslintrc",
+  "version": "1.0.0",
+  "description": "Configuración para ESLint",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eslint"
+  ],
+  "author": "Jahir Vidrio",
+  "license": "ISC",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "@typescript-eslint/parser": "^5.40.0",
+    "confusing-browser-globals": "^1.0.11",
+    "eslint": "^8.25.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0"
+  }
+}
