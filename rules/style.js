@@ -18,11 +18,7 @@ module.exports = {
     'block-spacing': ['error', 'always'],
 
     // enforce one true brace style
-    'brace-style': [
-      'error',
-      '1tbs',
-      { allowSingleLine: true },
-    ],
+    'brace-style': ['error', '1tbs', { allowSingleLine: true }],
 
     // require camel case names
     camelcase: ['error', { properties: 'never', ignoreDestructuring: false }],
@@ -186,10 +182,6 @@ module.exports = {
       },
     ],
 
-    // specify whether double or single quotes should be used in JSX attributes
-    // https://eslint.org/docs/rules/jsx-quotes
-    'jsx-quotes': ['off', 'prefer-double'],
-
     // enforces spacing between keys and values in object literal properties
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
 
@@ -225,11 +217,7 @@ module.exports = {
 
     // require or disallow an empty line between class members
     // https://eslint.org/docs/rules/lines-between-class-members
-    'lines-between-class-members': [
-      'error',
-      'always',
-      { exceptAfterSingleLine: false },
-    ],
+    'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: false }],
 
     // enforces empty lines around comments
     'lines-around-comment': 'off',
@@ -314,11 +302,7 @@ module.exports = {
         newIsCap: true,
         newIsCapExceptions: [],
         capIsNew: false,
-        capIsNewExceptions: [
-          'Immutable.Map',
-          'Immutable.Set',
-          'Immutable.List',
-        ],
+        capIsNewExceptions: ['Immutable.Map', 'Immutable.Set', 'Immutable.List'],
       },
     ],
 
@@ -477,11 +461,7 @@ module.exports = {
 
     // enforce the location of single-line statements
     // https://eslint.org/docs/rules/nonblock-statement-body-position
-    'nonblock-statement-body-position': [
-      'error',
-      'beside',
-      { overrides: {} },
-    ],
+    'nonblock-statement-body-position': ['error', 'beside', { overrides: {} }],
 
     // require padding inside curly braces
     'object-curly-spacing': ['error', 'always'],
@@ -520,11 +500,7 @@ module.exports = {
 
     // Requires operator at the beginning of the line in multiline statements
     // https://eslint.org/docs/rules/operator-linebreak
-    'operator-linebreak': [
-      'error',
-      'before',
-      { overrides: { '=': 'none' } },
-    ],
+    'operator-linebreak': ['error', 'before', { overrides: { '=': 'none' } }],
 
     // disallow padding within blocks
     'padded-blocks': [
@@ -553,18 +529,10 @@ module.exports = {
 
     // require quotes around object literal property names
     // https://eslint.org/docs/rules/quote-props.html
-    'quote-props': [
-      'error',
-      'as-needed',
-      { keywords: false, unnecessary: true, numbers: false },
-    ],
+    'quote-props': ['error', 'as-needed', { keywords: false, unnecessary: true, numbers: false }],
 
     // specify whether double or single quotes should be used
-    quotes: [
-      'error',
-      'single',
-      { avoidEscape: true },
-    ],
+    quotes: ['error', 'single'],
 
     // do not require jsdoc
     // https://eslint.org/docs/rules/require-jsdoc
@@ -581,11 +549,7 @@ module.exports = {
     'semi-style': ['error', 'last'],
 
     // requires object keys to be sorted
-    'sort-keys': [
-      'off',
-      'asc',
-      { caseSensitive: false, natural: true },
-    ],
+    'sort-keys': ['off', 'asc', { caseSensitive: false, natural: true }],
 
     // sort variables within the same declaration block
     'sort-vars': 'off',
@@ -630,11 +594,7 @@ module.exports = {
       {
         line: {
           exceptions: ['-', '+'],
-          markers: [
-            '=',
-            '!',
-            '/',
-          ], // space here to support sprockets directives, slash for TS /// comments
+          markers: ['=', '!', '/'], // space here to support sprockets directives, slash for TS /// comments
         },
         block: {
           exceptions: ['-', '+'],

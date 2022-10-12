@@ -98,7 +98,12 @@ module.exports = {
     // Replace Airbnb 'no-empty-function' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-function.md
     'no-empty-function': 'off',
-    '@typescript-eslint/no-empty-function': baseBestPracticesRules['no-empty-function'],
+    '@typescript-eslint/no-empty-function': [
+      baseBestPracticesRules['no-empty-function'][0],
+      {
+        allow: [...baseBestPracticesRules['no-empty-function'][1], 'private-constructors'],
+      },
+    ],
 
     // Replace Airbnb 'no-extra-parens' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-parens.md
@@ -262,6 +267,37 @@ module.exports = {
         'import/no-named-as-default-member': 'off',
         // Disable `import/no-unresolved`, see README.md for details
         'import/no-unresolved': 'off',
+
+        '@typescript-eslint/ban-types': [
+          'error',
+          {
+            types: {
+              String: {
+                message: 'Use string instead',
+                fixWith: 'string',
+              },
+              Number: {
+                message: 'Use number instead',
+                fixWith: 'number',
+              },
+              Boolean: {
+                message: 'Use boolean instead',
+                fixWith: 'boolean',
+              },
+              BigInt: {
+                message: 'Use bigint instead',
+                fixWith: 'bigint',
+              },
+              Array: {
+                message: 'Use Type[] shorthand syntax instead',
+              },
+              '{}': {
+                message: 'Use object instead',
+                fixWith: 'object',
+              },
+            },
+          },
+        ],
       },
     },
   ],
