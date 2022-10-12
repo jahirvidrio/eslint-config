@@ -101,7 +101,7 @@ module.exports = {
     '@typescript-eslint/no-empty-function': [
       baseBestPracticesRules['no-empty-function'][0],
       {
-        allow: [...baseBestPracticesRules['no-empty-function'][1], 'private-constructors'],
+        allow: [...baseBestPracticesRules['no-empty-function'][1].allow, 'private-constructors'],
       },
     ],
 
