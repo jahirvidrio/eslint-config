@@ -8,6 +8,17 @@ const { rules: baseVariablesRules } = require('./variables');
 
 module.exports = {
   rules: {
+    // TypeScript get and set convention names beginning with underscore
+    'no-underscore-dangle': [
+      'error',
+      {
+        allow: [],
+        allowAfterThis: true,
+        allowAfterSuper: true,
+        enforceInMethodNames: true,
+      },
+    ],
+
     // Replace Airbnb 'brace-style' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/brace-style.md
     'brace-style': 'off',
