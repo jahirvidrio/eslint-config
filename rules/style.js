@@ -8,7 +8,7 @@ module.exports = {
     // enforce line breaks between array elements
     // https://eslint.org/docs/rules/array-element-newline
     // TODO: enable? semver-major
-    'array-element-newline': ['error', { multiline: true, minItems: 4 }],
+    'array-element-newline': ['error', 'consistent'],
 
     // enforce spacing inside array brackets
     'array-bracket-spacing': ['error', 'never'],
