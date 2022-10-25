@@ -123,11 +123,9 @@ module.exports = {
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
     'import/extensions': [
       'error',
-      'ignorePackages',
+      'never',
       {
-        js: 'never',
-        mjs: 'never',
-        jsx: 'never',
+        ignorePackages: true,
       },
     ],
 
