@@ -311,6 +311,13 @@ module.exports = {
         ],
 
         '@typescript-eslint/explicit-member-accessibility': 'error',
+
+        '@typescript-eslint/explicit-function-return-type': [
+          'error', {
+            allowExpressions: true,
+            allowTypedFunctionExpressions: true,
+          },
+        ],
       },
     },
   ],
