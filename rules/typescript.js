@@ -45,6 +45,11 @@ module.exports = {
         selector: 'typeLike',
         format: ['PascalCase'],
       },
+      {
+        selector: 'variable',
+        modifiers: ['destructured'],
+        format: null,
+      },
     ],
 
     // Replace Airbnb 'comma-dangle' rule with '@typescript-eslint' version
