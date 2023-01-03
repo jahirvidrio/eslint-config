@@ -15,12 +15,16 @@ module.exports = {
     // Original: ['.mjs', '.js', '.json']
     'import/resolver': {
       node: {
-        extensions: ['.mjs', '.js', '.json', '.ts', '.d.ts'],
+        extensions: [
+          '.mjs', '.js', '.json', '.ts', '.d.ts',
+        ],
       },
     },
     // Append 'ts' extensions to Airbnb 'import/extensions' setting
     // Original: ['.js', '.mjs', '.jsx']
-    'import/extensions': ['.js', '.mjs', '.ts', '.d.ts'],
+    'import/extensions': [
+      '.js', '.mjs', '.ts', '.d.ts',
+    ],
     // Resolve type definition packages
     'import/external-module-folders': ['node_modules', 'node_modules/@types'],
   },
